@@ -1,0 +1,256 @@
+\documentclass[12pt]{article}
+\title{Phaistos Disc}
+\author{}
+\date{}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{stackengine}
+%\usepackage{pgffor}
+
+\setmainfont{Noto Serif}
+\newfontface\faegean{Aegean}
+\newfontface\fcode{Code2003}
+\newfontface\fnoto{Noto Sans Symbols}
+\newfontface\fnotob{Noto Sans Symbols2}
+\newfontface\fph{Phaistos}
+\newfontface\fsym{Symbola}
+\newfontfamily\fnorm{Noto Serif}
+
+\newcommand\phfontsize{\huge}
+\newcommand\phtextcolour{blue}
+
+\newcommand\phitem[2]{% 1=fontname, 2=text
+{#1\phfontsize\textcolor{\phtextcolour}{#2}}
+}
+
+\newcommand\phf[2]{\phitem{#1}{#2}}
+\newcommand\ph[1]{\phitem{\fnotob}{#1}}
+
+
+\ExplSyntaxOn
+
+
+\newcommand\dophaistos{%
+\regex_replace_all:nnN { p10 } { ^^^^^101d9 } \l_my_tl
+\regex_replace_all:nnN { p11 } { ^^^^^101da } \l_my_tl
+\regex_replace_all:nnN { p12 } { ^^^^^101db } \l_my_tl
+\regex_replace_all:nnN { p13 } { ^^^^^101dc } \l_my_tl
+\regex_replace_all:nnN { p14 } { ^^^^^101dd } \l_my_tl
+\regex_replace_all:nnN { p15 } { ^^^^^101de } \l_my_tl
+\regex_replace_all:nnN { p16 } { ^^^^^101df } \l_my_tl
+\regex_replace_all:nnN { p17 } { ^^^^^101e0 } \l_my_tl
+\regex_replace_all:nnN { p18 } { ^^^^^101e1 } \l_my_tl
+\regex_replace_all:nnN { p19 } { ^^^^^101e2 } \l_my_tl
+\regex_replace_all:nnN { p20 } { ^^^^^101e3 } \l_my_tl
+\regex_replace_all:nnN { p21 } { ^^^^^101e4 } \l_my_tl
+\regex_replace_all:nnN { p22 } { ^^^^^101e5 } \l_my_tl
+\regex_replace_all:nnN { p23 } { ^^^^^101e6 } \l_my_tl
+\regex_replace_all:nnN { p24 } { ^^^^^101e7 } \l_my_tl
+\regex_replace_all:nnN { p25 } { ^^^^^101e8 } \l_my_tl
+\regex_replace_all:nnN { p26 } { ^^^^^101e9 } \l_my_tl
+\regex_replace_all:nnN { p27 } { ^^^^^101ea } \l_my_tl
+\regex_replace_all:nnN { p28 } { ^^^^^101eb } \l_my_tl
+\regex_replace_all:nnN { p29 } { ^^^^^101ec } \l_my_tl
+\regex_replace_all:nnN { p30 } { ^^^^^101ed } \l_my_tl
+\regex_replace_all:nnN { p31 } { ^^^^^101ee } \l_my_tl
+\regex_replace_all:nnN { p32 } { ^^^^^101ef } \l_my_tl
+\regex_replace_all:nnN { p33 } { ^^^^^101f0 } \l_my_tl
+\regex_replace_all:nnN { p34 } { ^^^^^101f1 } \l_my_tl
+\regex_replace_all:nnN { p35 } { ^^^^^101f2 } \l_my_tl
+\regex_replace_all:nnN { p36 } { ^^^^^101f3 } \l_my_tl
+\regex_replace_all:nnN { p37 } { ^^^^^101f4 } \l_my_tl
+\regex_replace_all:nnN { p38 } { ^^^^^101f5 } \l_my_tl
+\regex_replace_all:nnN { p39 } { ^^^^^101f6 } \l_my_tl
+\regex_replace_all:nnN { p40 } { ^^^^^101f7 } \l_my_tl
+\regex_replace_all:nnN { p41 } { ^^^^^101f8 } \l_my_tl
+\regex_replace_all:nnN { p42 } { ^^^^^101f9 } \l_my_tl
+\regex_replace_all:nnN { p43 } { ^^^^^101fa } \l_my_tl
+\regex_replace_all:nnN { p44 } { ^^^^^101fb } \l_my_tl
+\regex_replace_all:nnN { p45 } { ^^^^^101fc } \l_my_tl
+\regex_replace_all:nnN { p46 } { ^^^^^101fd } \l_my_tl
+\regex_replace_all:nnN { x } { \cB\{ \c{fnorm} \c{scriptsize} x \cE\} } \l_my_tl
+\regex_replace_all:nnN { w } { \cB\{ \c{fnorm}  | \cE\} } \l_my_tl
+\regex_replace_all:nnN { (-\?) } { \cB\{ \c{fnorm} \c{normalsize} \c{textsuperscript}\cB\{ \0 \cE\} \cE\} } \l_my_tl
+    	
+\regex_replace_all:nnN { p1 } { ^^^^^101d0 } \l_my_tl
+\regex_replace_all:nnN { p2 } { ^^^^^101d1 } \l_my_tl
+\regex_replace_all:nnN { p3 } { ^^^^^101d2 } \l_my_tl
+\regex_replace_all:nnN { p4 } { ^^^^^101d3 } \l_my_tl
+\regex_replace_all:nnN { p5 } { ^^^^^101d4 } \l_my_tl
+\regex_replace_all:nnN { p6 } { ^^^^^101d5 } \l_my_tl
+\regex_replace_all:nnN { p7 } { ^^^^^101d6 } \l_my_tl
+\regex_replace_all:nnN { p8 } { ^^^^^101d7 } \l_my_tl
+\regex_replace_all:nnN { p9 } { ^^^^^101d8 } \l_my_tl
+\regex_replace_all:nnN { (\?) } { \cB\{ \c{fnorm} \c{normalsize} \c{textsuperscript}\cB\{ \0 \cE\} \cE\} } \l_my_tl
+
+}
+
+
+
+%\newcommand\phruby[1]{% 1=glyph, 2=p number
+%\stackon{\dophaistos{p#1}}{{\scriptsize #1}}
+%}
+
+\newcommand\phruby[2]{% 1=glyph, 2=p number
+\stackon{\strut\trphaistos{#1}}{{\fnorm\scriptsize\normalcolor #2}}
+}
+
+\newcommand\dophaistosr{%
+\regex_replace_all:nnN { p10 } { \c{phruby}\cB\{ ^^^^^101d9 \cE\} \cB\{ 10 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p11 } { \c{phruby}\cB\{ ^^^^^101da \cE\} \cB\{ 11 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p12 } { \c{phruby}\cB\{ ^^^^^101db \cE\} \cB\{ 12 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p13 } { \c{phruby}\cB\{ ^^^^^101dc \cE\} \cB\{ 13 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p14 } { \c{phruby}\cB\{ ^^^^^101dd \cE\} \cB\{ 14 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p15 } { \c{phruby}\cB\{ ^^^^^101de \cE\} \cB\{ 15 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p16 } { \c{phruby}\cB\{ ^^^^^101df \cE\} \cB\{ 16 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p17 } { \c{phruby}\cB\{ ^^^^^101e0 \cE\} \cB\{ 17 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p18 } { \c{phruby}\cB\{ ^^^^^101e1 \cE\} \cB\{ 18 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p19 } { \c{phruby}\cB\{ ^^^^^101e2 \cE\} \cB\{ 19 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p20 } { \c{phruby}\cB\{ ^^^^^101e3 \cE\} \cB\{ 20 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p21 } { \c{phruby}\cB\{ ^^^^^101e4 \cE\} \cB\{ 21 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p22 } { \c{phruby}\cB\{ ^^^^^101e5 \cE\} \cB\{ 22 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p23 } { \c{phruby}\cB\{ ^^^^^101e6 \cE\} \cB\{ 23 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p24 } { \c{phruby}\cB\{ ^^^^^101e7 \cE\} \cB\{ 24 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p25 } { \c{phruby}\cB\{ ^^^^^101e8 \cE\} \cB\{ 25 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p26 } { \c{phruby}\cB\{ ^^^^^101e9 \cE\} \cB\{ 26 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p27 } { \c{phruby}\cB\{ ^^^^^101ea \cE\} \cB\{ 27 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p28 } { \c{phruby}\cB\{ ^^^^^101eb \cE\} \cB\{ 28 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p29 } { \c{phruby}\cB\{ ^^^^^101ec \cE\} \cB\{ 29 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p30 } { \c{phruby}\cB\{ ^^^^^101ed \cE\} \cB\{ 30 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p31 } { \c{phruby}\cB\{ ^^^^^101ee \cE\} \cB\{ 31 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p32 } { \c{phruby}\cB\{ ^^^^^101ef \cE\} \cB\{ 32 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p33 } { \c{phruby}\cB\{ ^^^^^101f0 \cE\} \cB\{ 33 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p34 } { \c{phruby}\cB\{ ^^^^^101f1 \cE\} \cB\{ 34 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p35 } { \c{phruby}\cB\{ ^^^^^101f2 \cE\} \cB\{ 35 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p36 } { \c{phruby}\cB\{ ^^^^^101f3 \cE\} \cB\{ 36 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p37 } { \c{phruby}\cB\{ ^^^^^101f4 \cE\} \cB\{ 37 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p38 } { \c{phruby}\cB\{ ^^^^^101f5 \cE\} \cB\{ 38 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p39 } { \c{phruby}\cB\{ ^^^^^101f6 \cE\} \cB\{ 39 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p40 } { \c{phruby}\cB\{ ^^^^^101f7 \cE\} \cB\{ 40 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p41 } { \c{phruby}\cB\{ ^^^^^101f8 \cE\} \cB\{ 41 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p42 } { \c{phruby}\cB\{ ^^^^^101f9 \cE\} \cB\{ 42 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p43 } { \c{phruby}\cB\{ ^^^^^101fa \cE\} \cB\{ 43 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p44 } { \c{phruby}\cB\{ ^^^^^101fb \cE\} \cB\{ 44 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p45 } { \c{phruby}\cB\{ ^^^^^101fc \cE\} \cB\{ 45 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p46 } { \c{phruby}\cB\{ ^^^^^101fd \cE\} \cB\{ 46 \cE\} } \l_my_tl
+\regex_replace_all:nnN { x } { \cB\{ \c{fnorm} \c{scriptsize} x \cE\} } \l_my_tl
+\regex_replace_all:nnN { w } { \cB\{ \c{fnorm}  | \cE\} } \l_my_tl
+\regex_replace_all:nnN { (-\?) } { \cB\{ \c{fnorm} \c{normalsize} \c{textsuperscript}\cB\{ \0 \cE\} \cE\} } \l_my_tl
+    	
+\regex_replace_all:nnN { p1 } { \c{phruby}\cB\{ ^^^^^101d0 \cE\} \cB\{ 1 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p2 } { \c{phruby}\cB\{ ^^^^^101d1 \cE\} \cB\{ 2 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p3 } { \c{phruby}\cB\{ ^^^^^101d2 \cE\} \cB\{ 3 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p4 } { \c{phruby}\cB\{ ^^^^^101d3 \cE\} \cB\{ 4 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p5 } { \c{phruby}\cB\{ ^^^^^101d4 \cE\} \cB\{ 5 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p6 } { \c{phruby}\cB\{ ^^^^^101d5 \cE\} \cB\{ 6 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p7 } { \c{phruby}\cB\{ ^^^^^101d6 \cE\} \cB\{ 7 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p8 } { \c{phruby}\cB\{ ^^^^^101d7 \cE\} \cB\{ 8 \cE\} } \l_my_tl
+\regex_replace_all:nnN { p9 } { \c{phruby}\cB\{ ^^^^^101d8 \cE\} \cB\{ 9 \cE\} } \l_my_tl
+\regex_replace_all:nnN { (\?) } { \cB\{ \c{fnorm} \c{normalsize} \c{textsuperscript}\cB\{ \0 \cE\} \cE\} } \l_my_tl
+
+}
+
+
+
+
+
+
+
+
+\NewDocumentCommand { \trphaistos } { m } {%
+\tl_set:Nn \l_my_tl { #1 }
+  \dophaistos
+  \ph{\tl_use:N \l_my_tl}
+} 
+
+\NewDocumentEnvironment{phaistos}{ +b }
+{ \tl_set:Nn \l_my_tl { #1 }
+  \dophaistos
+  \tl_use:N \l_my_tl 
+  }
+{ }
+
+
+%-------------------------
+\NewDocumentCommand { \trphaistosr } { m } {%
+\tl_set:Nn \l_my_tl { #1 }
+\dophaistosr
+\ph{\tl_use:N \l_my_tl} 
+} 
+
+
+
+
+
+
+
+\ExplSyntaxOff
+
+%\newcommand\dophruby{%
+%\foreach \x/\y in {p10/10}{\phruby{p10}{\y}}
+%}
+
+
+\begin{document}
+\maketitle
+%𐇐𐇑𐇒𐇓𐇔
+%𐇕𐇖𐇗𐇘𐇙
+%𐇚𐇛𐇜𐇝𐇞
+%𐇟𐇠𐇡𐇢𐇣
+%𐇤𐇥𐇦𐇧𐇨
+%𐇩𐇪𐇫𐇬𐇭
+%𐇮𐇯𐇰𐇱𐇲
+%𐇳𐇴𐇵𐇶𐇷
+%𐇸𐇹𐇺𐇻𐇼𐇽
+
+
+\section{Font -- Phaistos Disc [46 characters]}
+\begin{itemize} 
+\item[\phf{\faegean}{𐇐}] Aegean [48 characters]
+\item[\phf{\fcode}{𐇐}] Code2003 [48 characters]
+\item[\phf{\fnoto}{𐇐}] Noto Sans Symbols [46 characters]
+\item[\phf{\fnotob}{𐇐}] Noto Sans Symbols2 [46 characters]
+\item[\phf{\fph}{𐇐}] Phaistos [45 characters]
+\item[\phf{\fsym}{𐇐}] Symbola [46 characters]
+\end{itemize}
+
+\section{The Symbols}
+\trphaistos{p1p2p3p4p5 p6p7p8p9p10 p11p12p13p14p15}
+
+\noindent\trphaistos{p16p17p18p19p20 p21p22p23p24p25 p26p27p28p29p30}
+
+\noindent\trphaistos{p31p32p33p34p35 p36p37p38p39p40 p41p42p43p44p45}
+
+\noindent\trphaistos{p46} combining mark, as in \trphaistos{p1p46}
+
+
+\section{The Symbols with ruby text}
+%\phruby{p10}{thingamajig}
+
+%\trphaistosr{p10p11p12}
+\trphaistosr{p1p2p3p4p5 p6p7p8p9p10 p11p12p13p14p15}
+
+\noindent\trphaistosr{p16p17p18p19p20 p21p22p23p24p25 p26p27p28p29p30}
+
+\noindent\trphaistosr{p31p32p33p34p35 p36p37p38p39p40 p41p42p43p44p45}
+
+%\noindent\trphaistosr{p46} combining mark, as in \trphaistosr{p1p46}
+
+
+%\trphaistosr{p1p2p3p4p5 p6p7p8p9p10 p11p12p13p14p15}
+%
+%\noindent\trphaistosr{p16p17p18p19p20 p21p22p23p24p25 p26p27p28p29p30}
+%
+%\noindent\trphaistosr{p31p32p33p34p35 p36p37p38p39p40 p41p42p43p44p45}
+%
+%\noindent\trphaistosr{p46} combining mark, as in \trphaistosr{p1p46}
+
+
+\section{Side A}
+\trphaistos{p2p12p13p1p18p46w p24p40p12w}
+
+\section{Side B}
+\trphaistos{p2p12p22p40p7w p27p45p7p35w p2p37p10p5p46w p22p25-?p27w p33p24p20?p12w}
+
+
+\end{document}
